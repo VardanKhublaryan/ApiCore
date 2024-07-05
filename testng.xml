@@ -1,0 +1,37 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ApiCore" parallel="tests" annotations="JDK">
+    <groups>
+        <run>
+            <include name="positive"/>
+            <include name="negative"/>
+        </run>
+    </groups>
+
+    <listeners>
+        <listener class-name="apiCore.helper.CustomListeners"/>
+    </listeners>
+
+    <test name="TestSuite">
+        <classes>
+            <class name="RegistrationTest"/>
+            <class name="ChangeInfoTest"/>
+            <class name="DeactivationTest"/>
+            <class name="BankChangeTest"/>
+        </classes>
+    </test>
+    <test name="TestSuite1">
+        <classes>
+            <class name="CheckTransactionTest"/>
+        </classes>
+    </test>
+    <test name="TestSuite2">
+        <classes>
+            <class name="CheckContactTest"/>
+        </classes>
+    </test>
+    <test name="TestSuite3">
+        <classes>
+            <class name="AuthorizationTest"/>
+        </classes>
+    </test>
+</suite>
