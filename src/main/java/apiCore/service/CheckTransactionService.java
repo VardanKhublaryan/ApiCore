@@ -4,6 +4,7 @@ import apiCore.constants.AuthorizationConstants;
 import apiCore.constants.InstituteTypes;
 import apiCore.constants.RegisterConstants;
 import apiCore.constants.TransactionTypes;
+import apiCore.helper.CustomListeners;
 import apiCore.helper.Utils;
 import apiCore.pojoClasses.AuthorizationPojo;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -52,7 +53,7 @@ public class CheckTransactionService extends BaseService {
             return post(CHECK_TRANSACTION_ENDPOINT, token, jsonBody);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            CustomListeners.printInfo(e);
             return null;
         }
     }

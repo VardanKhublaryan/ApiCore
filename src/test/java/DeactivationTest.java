@@ -16,14 +16,14 @@ import org.testng.asserts.SoftAssert;
 @Listeners(CustomListeners.class)
 public class DeactivationTest extends BaseTest {
 
-    DeactivationService deactivationService = new DeactivationService();
-    ChangeInfoConstants changeInfoConstants = new ChangeInfoConstants();
-    RegisterConstants registerConstants = new RegisterConstants();
-    ErrorMessages errorMessages = new ErrorMessages();
-    ResponseCodes responseCodes = new ResponseCodes();
-    DeactivationPojo responsePojo;
-    RegistrationPojo registrationPojo;
-    SoftAssert softAssert;
+    private final DeactivationService deactivationService = new DeactivationService();
+    private final ChangeInfoConstants changeInfoConstants = new ChangeInfoConstants();
+    private final RegisterConstants registerConstants = new RegisterConstants();
+    private final ErrorMessages errorMessages = new ErrorMessages();
+    private final ResponseCodes responseCodes = new ResponseCodes();
+    private DeactivationPojo responsePojo;
+    private RegistrationPojo registrationPojo;
+    private SoftAssert softAssert;
 
     @BeforeMethod(alwaysRun = true)
     public void registration() {

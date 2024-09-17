@@ -1,5 +1,6 @@
 package apiCore.service;
 
+import apiCore.helper.CustomListeners;
 import io.restassured.RestAssured;
 import io.restassured.config.SSLConfig;
 import io.restassured.filter.log.RequestLoggingFilter;
@@ -85,7 +86,7 @@ public class BaseService {
                 throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
             }
         } catch (Exception e) {
-            System.out.println("Exception: " + e);
+            CustomListeners.printInfo(e);
         } finally {
             assert inputStream != null;
             inputStream.close();
@@ -102,7 +103,7 @@ public class BaseService {
             try {
                 return getPropValues().getProperty(key);
             } catch (IOException e) {
-                e.printStackTrace();
+                CustomListeners.printInfo(e);
             }
         }
         return System.getProperty(key);

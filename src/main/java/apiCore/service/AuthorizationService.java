@@ -4,6 +4,7 @@ import apiCore.constants.AuthorizationConstants;
 import apiCore.constants.InstituteTypes;
 import apiCore.constants.RegisterConstants;
 import apiCore.constants.TransactionTypes;
+import apiCore.helper.CustomListeners;
 import apiCore.helper.Utils;
 import apiCore.pojoClasses.CheckContactPojo;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -93,7 +94,7 @@ public class AuthorizationService extends BaseService {
             return post(AUTHORISATION_ENDPOINT, token, jsonBody);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            CustomListeners.printInfo(e);
             return null;
         }
     }

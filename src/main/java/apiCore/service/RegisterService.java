@@ -3,6 +3,7 @@ package apiCore.service;
 import apiCore.constants.InstituteTypes;
 import apiCore.constants.RegisterConstants;
 import apiCore.constants.TransactionTypes;
+import apiCore.helper.CustomListeners;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.response.Response;
 
@@ -66,7 +67,7 @@ public class RegisterService extends BaseService {
             return post(REGISTRATION_ENDPOINT, token, jsonBody);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            CustomListeners.printInfo(e);
             return null;
         }
     }

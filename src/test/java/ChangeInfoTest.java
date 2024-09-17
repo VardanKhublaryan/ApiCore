@@ -55,7 +55,7 @@ public class ChangeInfoTest extends BaseTest {
 
     @Test(description = "B03", groups = "negative")
     public void nonExistingClientInfo() {
-        Response chengeInfoResponse = changeInfoService.nonExistingClientId( registrationPojo);
+        Response chengeInfoResponse = changeInfoService.nonExistingClientId(registrationPojo);
         /* extract response with pojo class**/
         changeInoPojo = chengeInfoResponse.as(ChangeInfoPojo.class);
         softAssert = new SoftAssert();

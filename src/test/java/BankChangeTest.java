@@ -11,11 +11,10 @@ import org.testng.asserts.SoftAssert;
 
 @Listeners(CustomListeners.class)
 public class BankChangeTest extends BaseTest {
-    RegistrationPojo responsePojo;
-    SoftAssert softAssert;
-    ErrorMessages errorMessages = new ErrorMessages();
-    ResponseCodes responseCodes = new ResponseCodes();
-    String clientId ;
+    private RegistrationPojo responsePojo;
+    private SoftAssert softAssert;
+    private final ErrorMessages errorMessages = new ErrorMessages();
+    private final ResponseCodes responseCodes = new ResponseCodes();
 
 
     @Test(description = "B01.2", groups = "positive")

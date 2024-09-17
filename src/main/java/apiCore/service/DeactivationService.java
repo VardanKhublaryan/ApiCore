@@ -4,6 +4,7 @@ import apiCore.constants.ChangeInfoConstants;
 import apiCore.constants.InstituteTypes;
 import apiCore.constants.RegisterConstants;
 import apiCore.constants.TransactionTypes;
+import apiCore.helper.CustomListeners;
 import apiCore.pojoClasses.RegistrationPojo;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -57,7 +58,7 @@ public class DeactivationService extends BaseService {
             return post(DEACTIVATION_ENDPOINT, token, jsonBody);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            CustomListeners.printInfo(e);
             return null;
         }
     }

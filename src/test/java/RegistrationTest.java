@@ -19,12 +19,12 @@ public class RegistrationTest extends BaseTest {
 
     private final RegisterService registerService = new RegisterService();
     private final BankChangeService bankChangeService = new BankChangeService();
-    ErrorMessages errorMessages = new ErrorMessages();
-    PhoneNumbers phoneNumbers = new PhoneNumbers();
-    RegisterConstants registerConstants = new RegisterConstants();
-    ResponseCodes responseCodes = new ResponseCodes();
-    RegistrationPojo responsePojo;
-    SoftAssert softAssert;
+    private final ErrorMessages errorMessages = new ErrorMessages();
+    private final PhoneNumbers phoneNumbers = new PhoneNumbers();
+    private final RegisterConstants registerConstants = new RegisterConstants();
+    private final ResponseCodes responseCodes = new ResponseCodes();
+    private RegistrationPojo responsePojo;
+    private SoftAssert softAssert;
 
 
     @Test(description = "B01.1", groups = "positive")

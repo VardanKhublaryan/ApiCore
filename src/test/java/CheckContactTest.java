@@ -15,12 +15,12 @@ import org.testng.asserts.SoftAssert;
 public class CheckContactTest extends  BaseTest {
 
     private static final CheckContactService checkContactService = new CheckContactService();
-    ErrorMessages errorMessages = new ErrorMessages();
-    InstituteTypes instituteTypes = new InstituteTypes();
-    PhoneNumbers phoneNumbers = new PhoneNumbers();
-    CheckContactPojo checkContactPojo;
-    ResponseCodes responseCodes = new ResponseCodes();
-    SoftAssert softAssert;
+    private final ErrorMessages errorMessages = new ErrorMessages();
+    private final InstituteTypes instituteTypes = new InstituteTypes();
+    private final PhoneNumbers phoneNumbers = new PhoneNumbers();
+    private CheckContactPojo checkContactPojo;
+    private final ResponseCodes responseCodes = new ResponseCodes();
+    private SoftAssert softAssert;
 
 
     @Test(description = "X01", groups = "positive")

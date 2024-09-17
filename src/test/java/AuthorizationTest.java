@@ -12,15 +12,15 @@ import org.testng.asserts.SoftAssert;
 @Listeners(CustomListeners.class)
 public class AuthorizationTest extends BaseTest {
 
-    SoftAssert softAssert;
-    CheckContactPojo checkContactPojo;
-    AuthorizationPojo authorizationPojo;
-    AuthorizationConstants authorizationConstants = new AuthorizationConstants();
-    ChangeInfoConstants changeInfoConstants = new ChangeInfoConstants();
-    ErrorMessages errorMessages = new ErrorMessages();
-    PhoneNumbers phoneNumbers = new PhoneNumbers();
-    ResponseCodes responseCodes = new ResponseCodes();
-    RegisterConstants registerConstants = new RegisterConstants();
+    private SoftAssert softAssert;
+    private CheckContactPojo checkContactPojo;
+    private AuthorizationPojo authorizationPojo;
+    private final AuthorizationConstants authorizationConstants = new AuthorizationConstants();
+    private final ChangeInfoConstants changeInfoConstants = new ChangeInfoConstants();
+    private final ErrorMessages errorMessages = new ErrorMessages();
+    private final PhoneNumbers phoneNumbers = new PhoneNumbers();
+    private final ResponseCodes responseCodes = new ResponseCodes();
+    private final RegisterConstants registerConstants = new RegisterConstants();
     private static final AuthorizationService authorizationService = new AuthorizationService();
     private static final CheckContactService checkContactService = new CheckContactService();
 

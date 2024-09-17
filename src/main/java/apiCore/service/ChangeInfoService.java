@@ -4,6 +4,7 @@ import apiCore.constants.ChangeInfoConstants;
 import apiCore.constants.InstituteTypes;
 import apiCore.constants.RegisterConstants;
 import apiCore.constants.TransactionTypes;
+import apiCore.helper.CustomListeners;
 import apiCore.helper.Utils;
 import apiCore.pojoClasses.RegistrationPojo;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -62,7 +63,7 @@ public class ChangeInfoService extends BaseService {
             String jsonBody = objectMapper.writeValueAsString(request);
             return post(CHANGE_INFO_ENDPOINT, token, jsonBody);
         } catch (Exception e) {
-            e.printStackTrace();
+            CustomListeners.printInfo(e);
             return null;
         }
     }

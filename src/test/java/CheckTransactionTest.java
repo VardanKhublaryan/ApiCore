@@ -15,17 +15,16 @@ import org.testng.asserts.SoftAssert;
 
 @Listeners(CustomListeners.class)
 public class CheckTransactionTest extends BaseTest {
-    SoftAssert softAssert;
-    AuthorizationConstants authorizationConstants = new AuthorizationConstants();
-    ChangeInfoConstants changeInfoConstants = new ChangeInfoConstants();
-    ErrorMessages errorMessages = new ErrorMessages();
-    PhoneNumbers phoneNumbers = new PhoneNumbers();
-    ResponseCodes responseCodes = new ResponseCodes();
-    CheckContactPojo checkContactPojo;
-    AuthorizationPojo authorizationPojo;
-    CheckTransactionPojo checkTransactionPojo;
+    private SoftAssert softAssert;
+    private final AuthorizationConstants authorizationConstants = new AuthorizationConstants();
+    private final ChangeInfoConstants changeInfoConstants = new ChangeInfoConstants();
+    private final ErrorMessages errorMessages = new ErrorMessages();
+    private final PhoneNumbers phoneNumbers = new PhoneNumbers();
+    private final ResponseCodes responseCodes = new ResponseCodes();
+    private CheckContactPojo checkContactPojo;
+    private AuthorizationPojo authorizationPojo;
+    private CheckTransactionPojo checkTransactionPojo;
     private static final AuthorizationService authorizationService = new AuthorizationService();
-
 
 
     @Test(description = "X09", groups = "positive")
