@@ -18,9 +18,9 @@ import static com.fasterxml.jackson.databind.jsonFormatVisitors.JsonValueFormat.
 
 
 public class AuthorizationService extends BaseService {
-    AuthorizationConstants authorizationConstants = new AuthorizationConstants();
-    RegisterConstants registerConstants = new RegisterConstants();
-    InstituteTypes instituteTypes = new InstituteTypes();
+    private final AuthorizationConstants authorizationConstants = new AuthorizationConstants();
+    private final RegisterConstants registerConstants = new RegisterConstants();
+    private final InstituteTypes instituteTypes = new InstituteTypes();
 
 
     public Response authorisationRequest(Object senderInstituteId, Object senderInstituteType, Object senderCustomerId,

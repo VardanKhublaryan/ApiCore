@@ -12,9 +12,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class BankChangeService extends BaseService {
-    InstituteTypes instituteTypes = new InstituteTypes();
-    RegisterConstants registerConstants = new RegisterConstants();
-    TransactionTypes transactionTypes = new TransactionTypes();
+    private final InstituteTypes instituteTypes = new InstituteTypes();
+    private final RegisterConstants registerConstants = new RegisterConstants();
+    private final TransactionTypes transactionTypes = new TransactionTypes();
 
     public Response bankChangeReq(Object senderInstituteId, Object senderInstituteType,
                                   Object senderCustomerId, Object senderCustomerIdType,

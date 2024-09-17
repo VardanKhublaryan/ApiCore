@@ -12,9 +12,9 @@ import java.util.Map;
 
 
 public class RegisterService extends BaseService {
-    InstituteTypes instituteType = new InstituteTypes();
-    RegisterConstants registerConstants = new RegisterConstants();
-    TransactionTypes transactionTypes = new TransactionTypes();
+    private final InstituteTypes instituteType = new InstituteTypes();
+    private final RegisterConstants registerConstants = new RegisterConstants();
+    private final TransactionTypes transactionTypes = new TransactionTypes();
 
 
     public Response signUp(Object senderInstituteId, Object senderInstituteType,

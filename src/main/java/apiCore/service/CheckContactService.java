@@ -12,10 +12,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class CheckContactService extends BaseService {
-    RegisterConstants registerConstants = new RegisterConstants();
-    InstituteTypes instituteTypes = new InstituteTypes();
-    TransactionTypes transactionTypes = new TransactionTypes();
-    AuthorizationConstants authorizationConstants = new AuthorizationConstants();
+    private final RegisterConstants registerConstants = new RegisterConstants();
+    private final InstituteTypes instituteTypes = new InstituteTypes();
+    private final TransactionTypes transactionTypes = new TransactionTypes();
+    private final AuthorizationConstants authorizationConstants = new AuthorizationConstants();
 
     public Response checkContactRequest(Object senderInstituteId, Object senderInstituteType,
                                         Object senderCustomerId, Object senderCustomerIdType,

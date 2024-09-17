@@ -14,10 +14,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class DeactivationService extends BaseService {
-    ChangeInfoConstants changeInfoConstants = new ChangeInfoConstants();
-    InstituteTypes instituteTypes = new InstituteTypes();
-    RegisterConstants registerConstants = new RegisterConstants();
-    TransactionTypes transactionTypes = new TransactionTypes();
+    private final  ChangeInfoConstants changeInfoConstants = new ChangeInfoConstants();
+    private final InstituteTypes instituteTypes = new InstituteTypes();
+    private final RegisterConstants registerConstants = new RegisterConstants();
+    private final TransactionTypes transactionTypes = new TransactionTypes();
 
     public Response deactivationRequest(Object senderInstituteId, Object senderInstituteType, Object newClientId,
                                         Object clientType, Object clientName, Object senderCustomerId,
