@@ -3,8 +3,6 @@ package apiCore.service;
 import apiCore.helper.CustomListeners;
 import io.restassured.RestAssured;
 import io.restassured.config.SSLConfig;
-import io.restassured.filter.log.RequestLoggingFilter;
-import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
